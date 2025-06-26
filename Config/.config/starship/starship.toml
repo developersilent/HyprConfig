@@ -1,0 +1,206 @@
+################################################################################
+# ░██████╗████████╗░█████╗░██████╗░░██████╗██╗░░██╗██╗██████╗░
+# ██╔════╝╚══██╔══╝██╔══██╗██╔══██╗██╔════╝██║░░██║██║██╔══██╗
+# ╚█████╗░░░░██║░░░███████║██████╔╝╚█████╗░███████║██║██████╔╝
+# ░╚═══██╗░░░██║░░░██╔══██║██╔══██╗░╚═══██╗██╔══██║██║██╔═══╝░
+# ██████╔╝░░░██║░░░██║░░██║██║░░██║██████╔╝██║░░██║██║██║░░░░░
+# ╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░╚═╝░░╚═╝╚═╝╚═╝░░░░░
+# Gruvbox Material Dark Hard Theme - Modern & Beautiful
+################################################################################
+
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+
+# Main format - Clean and Modern
+format = """\
+╭─ $os\
+$directory\
+$git_branch\
+$fill\
+$c\
+$cmake\
+$golang\
+$java\
+$lua\
+$nodejs\
+$python\
+$rust\
+$meson\
+$cpp\
+$env_var\
+$crystal\
+$custom\
+$sudo\
+$cmd_duration\
+$line_break\
+╰─$jobs\
+$time\
+$status\
+ \
+$container\
+$shell\
+$character\
+"""
+
+continuation_prompt = '▶▶ '
+
+# Fill character for spacing
+[fill]
+symbol = ' '
+
+# OS symbol with Gruvbox colors
+[os]
+disabled = false
+format = '[$symbol ]($style)'
+
+[os.symbols]
+Arch = "󰣇"
+
+# Username styling
+[username]
+show_always = false
+style_user = "bold fg:#d8a657"
+style_root = "bold fg:#ea6962"
+format = '[$user]($style)'
+
+# Hostname styling  
+[hostname]
+ssh_only = true
+format = '@[$hostname](bold fg:#89b482) '
+disabled = false
+
+# Directory with simple path display
+[directory]
+disabled = false
+format = "[$path]($style) "
+style = "bold fg:#7daea3"
+truncate_to_repo = false
+
+# Git branch with nice styling
+[git_branch]
+format = " on [$symbol$branch]($style)"
+symbol = " "
+style = "bold fg:#a9b665"
+
+# Git status with clean indicators
+[git_status]
+format = ' [\[$all_status$ahead_behind\]]($style)'
+style = "bold fg:#d8a657"
+conflicted = "󰞇"
+ahead = "󰜷 ${count}"
+behind = "󰜮 ${count}"
+diverged = "󰹺󰜷 ${ahead_count}󰜮${behind_count}"
+untracked = "󰋖 ${count}"
+stashed = "󰏗 ${count}"
+modified = "󰏫 ${count}"
+staged = "󰐕$ {count}"
+renamed = "󰑕 ${count}"
+deleted = "󰍶 ${count}"
+
+# Git state
+[git_state]
+format = ' \([$state( $progress_current/$progress_total)]($style)\)'
+style = "bold fg:#e78a4e"
+
+# Git metrics
+[git_metrics]
+disabled = false
+added_style = "bold fg:#a9b665"
+deleted_style = "bold fg:#ea6962"
+format = ' ([󰐕$added]($added_style))([󰍶 $deleted]($deleted_style))'
+only_nonzero_diffs = true
+
+# Command duration
+[cmd_duration]
+min_time = 2_000
+format = "took [$duration]($style) "
+style = "bold fg:#d3869b"
+
+# Jobs indicator
+[jobs]
+format = "[$symbol$number]($style) "
+style = "bold fg:#e78a4e"
+symbol = "✦"
+
+# Time with nice styling
+[time]
+disabled = false
+format = '[ $time]($style) '
+style = "bold fg:#89b482"
+time_format = "%R"
+
+# Status indicator
+[status]
+disabled = false
+format = '[$symbol$status]($style) '
+style = "bold fg:#ea6962"
+symbol = "✖ "
+
+# Character prompt
+[character]
+success_symbol = "[❯](bold fg:#a9b665)"
+error_symbol = "[❯](bold fg:#ea6962)"
+vicmd_symbol = "[❮](bold fg:#d8a657)"
+
+# Language configurations with Gruvbox colors
+
+[lua]
+format = "[$symbol($version)]($style) "
+style = "bold fg:#7daea3"
+symbol = "🌙 "
+version_format = "v${raw}"
+
+[nodejs]
+detect_extensions = []
+detect_files = ["package-lock.json", "yarn.lock", "package.json"]
+detect_folders = ["node_modules"]
+format = "[$symbol($version)]($style) "
+style = "bold fg:#a9b665"
+symbol = " "
+version_format = "v${raw}"
+
+[python]
+format = '[$symbol$pyenv_prefix($version)(\($virtualenv\))]($style) '
+style = "bold fg:#d8a657"
+symbol = " "
+version_format = "v${raw}"
+
+[rust]
+format = "[$symbol($version)]($style) "
+style = "bold fg:#e78a4e"
+symbol = " "
+version_format = "v${raw}"
+
+[c]
+format = "[$symbol($version(-$name))]($style) "
+style = "bold fg:#7daea3" 
+symbol = " "
+
+[cpp]
+format = "[$symbol($version)]($style) "
+style = "bold fg:#7daea3"
+symbol = " "
+
+[golang]
+format = "[$symbol($version)]($style) "
+style = "bold fg:#89b482"
+symbol = " "
+version_format = "v${raw}"
+
+[java]
+format = "[$symbol($version)]($style) "
+style = "bold fg:#ea6962"
+symbol = " "
+version_format = "${raw}"
+
+[cmake]
+format = "[$symbol($version)]($style) "
+style = "bold fg:#d3869b"
+symbol = "△ "
+
+[meson]
+format = "[$symbol($version)]($style) "
+style = "bold fg:#d3869b"
+symbol = "⬢ "
+
