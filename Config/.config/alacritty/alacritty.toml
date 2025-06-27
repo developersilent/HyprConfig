@@ -45,7 +45,7 @@ y = 0          # Individual glyph y offset
 # Gruvbox Material Dark Hard Theme
 [colors.primary]
 background = "#1d2021"  # Dark hard background
-foreground = "#ddc7a1"  # Gruvbox Material foreground (consistent with Qt/Kvantum)
+foreground = "#ddc7a1"  # Gruvbox Material foreground
 
 [colors.normal]
 black   = "#1d2021"

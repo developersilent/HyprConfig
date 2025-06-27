@@ -27,7 +27,6 @@ qt5-graphicaleffects                                   # for sddm theme effects
 hyprland                                               # wlroots-based wayland compositor
 dunst                                                  # notification daemon
 rofi-wayland                                           # application launcher
-waybar                                                 # system bar
 swww                                                   # wallpaper
 hyprlock                                               # lock screen
 wlogout                                                # logout menu
@@ -52,21 +51,14 @@ dconf                                                  # configuration system fo
 
 # --------------------------------------------------- // Theming
 nwg-look                                               # gtk configuration tool
-qt5ct                                                  # qt5 configuration tool
-qt6ct                                                  # qt6 configuration tool
 gtk3                                                   # gtk3 toolkit for nwg-look
 gtk4                                                   # gtk4 toolkit for nwg-look
-kvantum                                                # svg based qt6 theme engine
-kvantum-qt5                                            # svg based qt5 theme engine
 qt5-wayland                                            # wayland support in qt5
 qt6-wayland                                            # wayland support in qt6
 
 # --------------------------------------------------- // Applications
 librewolf-bin                                              # privacy-focused browser
 alacritty                                              # terminal
-nautilus                                              # GNOME file manager
-gvfs                                                   # virtual filesystem support for nautilus
-gvfs-mtp                                               # MTP device support for nautilus
 fish                                                   # shell
 neovim                                                 # modern vim-based text editor
 fzf                                                    # Command-line fuzzy finder

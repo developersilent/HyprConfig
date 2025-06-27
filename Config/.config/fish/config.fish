@@ -1,20 +1,39 @@
 set -g fish_greeting
 
-# Environment variables for Qt theming
-set -gx QT_QPA_PLATFORMTHEME qt5ct
-set -gx QT_STYLE_OVERRIDE Fusion
+source ~/.config/fish/env_config.fish
 
-if status is-interactive
+if type -q starship
     starship init fish | source
+    set -gx STARSHIP_CACHE $XDG_CACHE_HOME/starship
+    set -gx STARSHIP_CONFIG $XDG_CONFIG_HOME/starship/starship.toml
 end
 
-# List Directory (optimized)
-alias l='eza -lh --icons=auto' # long list
-alias ls='eza -1 --icons=auto' # short list  
+
+# fzf 
+if type -q fzf
+    fzf --fish | source 
+end
+
+
+
+
+
+
+
+# example integration with bat : <cltr+f>
+# bind -M insert \ce '$EDITOR $(fzf --preview="bat --color=always --plain {}")' 
+
+
+set fish_pager_color_prefix cyan
+set fish_color_autosuggestion brblack 
+
+# List Directory
+alias l='eza -lh  --icons=auto' # long list
+alias ls='eza   --icons=auto' # short list
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
 alias ld='eza -lhD --icons=auto' # long list dirs
-alias lt='eza --icons=auto --tree --level=2' # list folder as tree (limited depth for performance)
-alias ltt='eza --icons=auto --tree' # full tree when needed
+alias lt='eza --icons=auto --tree' # list folder as tree
+alias vc='code'
 
 # Handy change dir shortcuts
 abbr .. 'cd ..'

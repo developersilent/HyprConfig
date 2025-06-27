@@ -107,12 +107,6 @@ if [ ${flg_Install} -eq 1 ]; then
     echo ""
     if ! chk_list "aurhlpr" "${aurList[@]}"; then
         print_log -c "\nAUR Helpers :: "
-        aurList+=("yay-bin" "paru-bin")
-        for i in "${!aurList[@]}"; do
-            print_log -sec "$((i + 1))" " ${aurList[$i]} "
-        done
-
-        prompt_timer 120 "Enter option number [default: paru] | q to quit "
 
         case "${PROMPT_INPUT}" in
         1) export getAur="paru" ;;

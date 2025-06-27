@@ -31,15 +31,9 @@ S|${HOME}/.config|alacritty|alacritty
 S|${HOME}/.config|fish|fish  
 S|${HOME}/.config|hypr|hyprland
 S|${HOME}/.config|starship|starship
-S|${HOME}/.config|waybar|waybar
-S|${HOME}/.config|dunst|dunst
-S|${HOME}/.config|nautilus|nautilus gvfs
-S|${HOME}/.local/share|bin|hyprland
+S|${HOME}/.local/share|applications|fish
 
 # GTK theming support for nwg-look
 P|${HOME}/.config|gtk-3.0|nwg-look
 P|${HOME}/.config|gtk-4.0|nwg-look
-P|${HOME}/.config|qt5ct|qt5ct
-P|${HOME}/.config|qt6ct|qt6ct
-P|${HOME}/.config|Kvantum|kvantum kvantum-qt5
 P|${HOME}|.gtkrc-2.0|nwg-look
