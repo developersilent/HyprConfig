@@ -115,10 +115,7 @@ if [ ${flg_Install} -eq 1 ]; then
         prompt_timer 120 "Enter option number [default: paru] | q to quit "
 
         case "${PROMPT_INPUT}" in
-        1) export getAur="yay" ;;
-        2) export getAur="paru" ;;
-        3) export getAur="yay-bin" ;;
-        4) export getAur="paru-bin" ;;
+        1) export getAur="paru" ;;
         q)
             print_log -sec "AUR" -crit "Quit" "Exiting..."
             exit 1
@@ -143,8 +140,7 @@ if [ ${flg_Install} -eq 1 ]; then
         prompt_timer 120 "Enter option number [default: fish] | q to quit "
 
         case "${PROMPT_INPUT}" in
-        1) export myShell="zsh" ;;
-        2) export myShell="fish" ;;
+        1) export myShell="fish" ;;
         q)
             print_log -sec "shell" -crit "Quit" "Exiting..."
             exit 1
@@ -184,7 +180,6 @@ if [ ${flg_Restore} -eq 1 ]; then
         hyprctl keyword misc:disable_autoreload 1 -q
     fi
 
-    "${scrDir}/restore_fnt.sh"
     "${scrDir}/restore_cfg.sh"
     
     print_log -g "[generate] " "cache ::" "Wallpapers..."

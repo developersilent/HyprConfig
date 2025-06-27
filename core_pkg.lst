@@ -29,15 +29,15 @@ dunst                                                  # notification daemon
 rofi-wayland                                           # application launcher
 waybar                                                 # system bar
 swww                                                   # wallpaper
-swaylock-effects                                       # lock screen (alternative to hyprlock)
+hyprlock                                               # lock screen
 wlogout                                                # logout menu
 grim                                                   # screenshot tool
-eyedropper                                             # color picker and formatter
+hyprpicker                                             # color picker
 slurp                                                  # region select for screenshot/screenshare
 satty                                                  # Modern Screenshot Annotation
 cliphist                                               # clipboard manager
 wl-clip-persist                                        # Keep Wayland clipboard even after programs close (avoids crashes)
-gammastep                                              # blue light filter (alternative to hyprsunset)
+hyprsunset                                             # blue light filter
 
 # --------------------------------------------------- // Dependencies
 polkit-gnome                                           # authentication agent
@@ -47,7 +47,7 @@ pacman-contrib                                         # for system update check
 jq                                                     # for json processing
 libnotify                                              # for notifications
 ttf-roboto                                             # roboto font family
-gsettings-desktop-schemas                              # desktop schemas for nwg-look
+ttf-jetbrains-mono-nerd                                # jetbrains font family
 dconf                                                  # configuration system for nwg-look
 
 # --------------------------------------------------- // Theming
@@ -56,13 +56,17 @@ qt5ct                                                  # qt5 configuration tool
 qt6ct                                                  # qt6 configuration tool
 gtk3                                                   # gtk3 toolkit for nwg-look
 gtk4                                                   # gtk4 toolkit for nwg-look
-adwaita-icon-theme                                     # default icon theme for GTK
+kvantum                                                # svg based qt6 theme engine
+kvantum-qt5                                            # svg based qt5 theme engine
 qt5-wayland                                            # wayland support in qt5
 qt6-wayland                                            # wayland support in qt6
 
 # --------------------------------------------------- // Applications
-librewolf                                              # privacy-focused browser
+librewolf-bin                                              # privacy-focused browser
 alacritty                                              # terminal
+nautilus                                              # GNOME file manager
+gvfs                                                   # virtual filesystem support for nautilus
+gvfs-mtp                                               # MTP device support for nautilus
 fish                                                   # shell
 neovim                                                 # modern vim-based text editor
 fzf                                                    # Command-line fuzzy finder

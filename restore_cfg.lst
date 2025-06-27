@@ -34,8 +34,12 @@ Y|Y|${HOME}/.config|alacritty|alacritty
 Y|Y|${HOME}/.config|fish|fish  
 Y|Y|${HOME}/.config|hypr|hyprland
 Y|Y|${HOME}/.config|starship|starship
+Y|Y|${HOME}/.config|waybar|waybar
+Y|Y|${HOME}/.config|nautilus|nautilus gvfs
+Y|Y|${HOME}/.local/share|bin|hyprland
 Y|Y|${HOME}/.config|gtk-3.0|nwg-look
 Y|Y|${HOME}/.config|gtk-4.0|nwg-look
 Y|Y|${HOME}/.config|qt5ct|qt5ct
 Y|Y|${HOME}/.config|qt6ct|qt6ct
+Y|Y|${HOME}/.config|Kvantum|kvantum kvantum-qt5
 Y|Y|${HOME}|.gtkrc-2.0|nwg-look

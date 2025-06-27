@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2154
 # shellcheck disable=SC1091
-#|---/ /+----------------------------------------+---/ /|#
-#|--/ /-| Script to install pkgs from input list |--/ /-|#
-#|-/ /--| Prasanth Rangan                        |-/ /--|#
-#|/ /---+----------------------------------------+/ /---|#
+
 
 scrDir=$(dirname "$(realpath "$0")")
 if ! source "${scrDir}/global.sh"; then

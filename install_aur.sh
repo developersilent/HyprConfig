@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
-#|---/ /+-------------------------------------------+---/ /|#
-#|--/ /-| Script to install aur helper, yay or paru |--/ /-|#
-#|-/ /--| Prasanth Rangan                           |-/ /--|#
-#|/ /---+-------------------------------------------+/ /---|#
 
 scrDir=$(dirname "$(realpath "$0")")
 # shellcheck disable=SC1091
@@ -13,20 +9,12 @@ fi
 
 # shellcheck disable=SC2154
 if chk_list "aurhlpr" "${aurList[@]}"; then
+    echo ${aurList[@]}
     print_log -sec "AUR" -stat "Detected" "${aurhlpr}"
     exit 0
 fi
 
-aurhlpr="${1:-yay-bin}"
-
-if [ -d "$HOME/Clone" ]; then
-    print_log -sec "AUR" -stat "exist" "$HOME/Clone directory..."
-    rm -rf "$HOME/Clone/${aurhlpr}"
-else
-    mkdir "$HOME/Clone"
-    echo -e "[Desktop Entry]\nIcon=default-folder-git" >"$HOME/Clone/.directory"
-    print_log -sec "AUR" -stat "created" "$HOME/Clone directory..."
-fi
+aurhlpr="${1:-paru}"
 
 if pkg_installed git; then
     git clone "https://aur.archlinux.org/${aurhlpr}.git" "$HOME/Clone/${aurhlpr}"

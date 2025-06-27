@@ -6,9 +6,9 @@ scrDir="$(dirname "$(realpath "$0")")"
 cloneDir="$(dirname "${scrDir}")" # fallback, we will use CLONE_DIR now
 cloneDir="${CLONE_DIR:-${cloneDir}}"
 confDir="${XDG_CONFIG_HOME:-$HOME/.config}"
-cacheDir="${XDG_CACHE_HOME:-$HOME/.cache}/hyde"
-aurList=("paru" "yay")
-shlList=("fish" "zsh")
+cacheDir="${XDG_CACHE_HOME:-$HOME/.cache}"
+aurList=("paru")
+shlList=("fish")
 
 export cloneDir
 export confDir

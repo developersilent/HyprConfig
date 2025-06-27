@@ -45,7 +45,7 @@ y = 0          # Individual glyph y offset
 # Gruvbox Material Dark Hard Theme
 [colors.primary]
 background = "#1d2021"  # Dark hard background
-foreground = "#d4be98"  # Gruvbox Material foreground
+foreground = "#ddc7a1"  # Gruvbox Material foreground (consistent with Qt/Kvantum)
 
 [colors.normal]
 black   = "#1d2021"
@@ -55,7 +55,7 @@ yellow  = "#d8a657"
 blue    = "#7daea3"
 magenta = "#d3869b"
 cyan    = "#89b482"
-white   = "#d4be98"
+white   = "#ddc7a1"
 
 [colors.bright]
 black   = "#665c54"
@@ -65,4 +65,4 @@ yellow  = "#d8a657"
 blue    = "#7daea3"
 magenta = "#d3869b"
 cyan    = "#89b482"
-white   = "#d4be98"
+white   = "#ddc7a1"
