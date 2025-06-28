@@ -143,10 +143,11 @@ deploy_psv() {
                     ;;
                 "P")
                     [ "${flg_DryRun}" -ne 1 ] && cp -r "${pth}/${cfg_chk}" "${BkpDir}${tgt}"
-                    if ! [ "${flg_DryRun}" -ne 1 ] && cp -rn "${CfgDir}${tgt}/${cfg_chk}" "${pth}" 2>/dev/null; then
-                        print_log -g "[copy to backup]" " > " -y "[populate]" -b " :: " "${pth}${tgt}/${cfg_chk}"
+                    if [ "${flg_DryRun}" -ne 1 ]; then
+                        cp -rn "${CfgDir}${tgt}/${cfg_chk}" "${pth}" 2>/dev/null
+                        print_log -g "[copy to backup]" " > " -y "[populate]" -b " :: " "${pth}/${cfg_chk}"
                     else
-                        print_log -g "[copy to backup]" " > " -y "[preserved]" -b " :: " "${pth}" + 208 " <--  " "${CfgDir}${tgt}/${cfg_chk}"
+                        print_log -g "[copy to backup]" " > " -y "[preserved]" -b " :: " "${pth}" -r " <--  " "${CfgDir}${tgt}/${cfg_chk}"
                     fi
                     ;;
                 esac

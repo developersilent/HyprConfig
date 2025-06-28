@@ -32,8 +32,24 @@ S|${HOME}/.config|fish|fish
 S|${HOME}/.config|hypr|hyprland
 S|${HOME}/.config|starship|starship
 S|${HOME}/.local/share|applications|fish
+S|${HOME}/.local/share|bin|hyprland
+S|${HOME}/.local/share|icons|nwg-look
+S|${HOME}/.local/share|themes|nwg-look
 
 # GTK theming support for nwg-look
 P|${HOME}/.config|gtk-3.0|nwg-look
 P|${HOME}/.config|gtk-4.0|nwg-look
 P|${HOME}|.gtkrc-2.0|nwg-look
+
+# Icon themes
+S|${HOME}/.local/share|icons|gtk3-nocsd
+S|${HOME}/.local/share/icons|Tela-circle-black|gtk3-nocsd
+
+# GTK themes  
+S|${HOME}/.local/share|themes|gtk3-nocsd
+S|${HOME}/.local/share/themes|Gruvbox-Dark|gtk3-nocsd
+S|${HOME}/.local/share/themes|Gruvbox-Dark-hdpi|gtk3-nocsd
+S|${HOME}/.local/share/themes|Gruvbox-Dark-xhdpi|gtk3-nocsd
+
+# Wallpapers
+S|${HOME}/.local/share|wallpapers|feh
