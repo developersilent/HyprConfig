@@ -15,11 +15,6 @@ if type -q fzf
 end
 
 
-
-
-
-
-
 # example integration with bat : <cltr+f>
 # bind -M insert \ce '$EDITOR $(fzf --preview="bat --color=always --plain {}")' 
 

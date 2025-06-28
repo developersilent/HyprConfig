@@ -164,6 +164,12 @@ if [ ${flg_Install} -eq 1 ]; then
     # install packages from the list #
     #--------------------------------#
     "${scrDir}/install_pkg.sh" "${scrDir}/install_pkg.lst"
+
+    if [ $SHELL != "/bin/${myShell}" ]; then
+        print_log -sec "shell" -stat "Changing shell to" "${myShell}"
+        chsh -s "/bin/${myShell}"
+        export SHELL="/bin/${myShell}"
+    fi
 fi
 
 #---------------------------#
