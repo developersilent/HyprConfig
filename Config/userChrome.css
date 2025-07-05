@@ -5,7 +5,6 @@
   border: none !important; /* Remove all borders */
   outline: none !important; /* Remove outlines */
 }
-:root { --zen-themed-toolbar-bg-transparent: transparent !important; }
 
 #PanelUI-mainView,
 #PanelUI-multiView,

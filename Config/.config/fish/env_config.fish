@@ -73,14 +73,9 @@ if test -z "$PARALLEL_HOME"
     set -gx PARALLEL_HOME "$XDG_CONFIG_HOME/parallel"
 end
 
-# GTK Theme Environment Variables
-set -gx GTK_THEME "Gruvbox-Dark"
+# Cursor theme
 set -gx XCURSOR_THEME "Gruvbox-cursor"
 set -gx XCURSOR_SIZE 24
-
-# Ensure GTK applications use the correct theme
-set -gx GTK2_RC_FILES "$HOME/.gtkrc-2.0"
-set -gx QT_STYLE_OVERRIDE "gtk3"
 
 # Icon theme
 set -gx ICON_THEME "Tela-circle-black"
