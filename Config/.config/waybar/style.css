@@ -1,0 +1,157 @@
+/*****----- Global Properties -----*****/
+* {
+    border: none;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    font-size: 10px;
+    min-height: 10px;
+}
+
+
+@import "colors.css";
+
+/*****----- Main Window & Tooltip -----*****/
+window#waybar {
+    background: rgba(14, 13, 13, 0.680);
+}
+
+tooltip {
+    background: @surface_container;
+    color: @on_surface;
+    border-radius: 7px;
+}
+
+/*****----- Workspaces -----*****/
+#workspaces button {
+    box-shadow: none;
+    text-shadow: none;
+    padding: 2px 2px;
+    border-radius: 8px;
+    margin: 4px 2px;
+    color: @on_surface;
+    animation: ws_normal 20s ease-in-out 1;
+}
+
+#workspaces button.active {
+    background: @surface_container_high;
+    color: @primary;
+    margin: 4px 2px;
+    padding: 2px 2px;
+    animation: ws_active 20s ease-in-out 1;
+    transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
+}
+
+#workspaces button:hover {
+    background: @surface_container_highest;
+    color: @primary;
+    margin: 4px 2px;
+    padding: 2px 2px;
+    animation: ws_hover 20s ease-in-out 1;
+    transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
+}
+
+/*****----- Tray -----*****/
+#tray menu {
+    border-radius: 8px;
+    opacity: 0.98;
+    background-color: @surface_container;
+    color: @primary;
+}
+
+#tray menu * {
+    min-height: 16px;
+    border-radius: 5px;
+}
+
+#tray menu *:hover {
+    background-color: @surface_container_high;
+    color: @primary;
+}
+
+#tray menu *:checked {
+    border-radius: 3px;
+    background-color: @primary;
+    color: @surface_container_high;
+}
+
+#tray menu separator {
+    min-height: 10px;
+}
+
+/*****----- Module Styling -----*****/
+#backlight,
+#clock,
+#cpu,
+#custom-cpuinfo,
+#idle_inhibitor,
+#memory,
+#tray,
+#bluetooth,
+#network,
+#custom-notifications,
+#custom-updates,
+#pulseaudio,
+#custom-spotify,
+#workspaces,
+#custom-l_end,
+#custom-r_end,
+#custom-sl_end,
+#custom-sr_end,
+#custom-rl_end,
+#custom-rr_end {
+    color: @on_surface;
+    background: @surface_container;
+    opacity: 0.9;
+    margin: 4px 0px 3px 0px;
+    padding: 0px 5px;
+}
+
+
+#workspaces {
+    padding: 0px;
+}
+
+/*****----- Module Borders -----*****/
+#custom-r_end {
+    border-radius: 0px 15px 15px 0px;
+    margin-right: 6px;
+    padding-right: 1px;
+}
+
+#custom-l_end {
+    border-radius: 15px 0px 0px 15px;
+    margin-left: 6px;
+    padding-left: 1px;
+}
+
+#custom-sr_end {
+    margin-right: 6px;
+    padding-right: 1px;
+}
+
+#custom-sl_end {
+    margin-left: 6px;
+    padding-left: 1px;
+}
+
+#custom-rr_end {
+    border-radius: 0px 0px 0px 0px;
+    margin-right: 6px;
+    padding-right: 1px;
+}
+
+#custom-rl_end {
+    border-radius: 0px 0px 0px 0px;
+    margin-left: 6px;
+    padding-left: 1px;
+}
+
+#network,
+#bluetooth {
+    font-size: 11px;
+}
+
+#custom-updates {
+    font-size: 11px;
+    color: @primary;
+}

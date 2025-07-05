@@ -1,0 +1,54 @@
+/* ========================================
+   Zen Browser + Hide Menu Items
+   ======================================== */
+*{
+  border: none !important; /* Remove all borders */
+  outline: none !important; /* Remove outlines */
+}
+:root { --zen-themed-toolbar-bg-transparent: transparent !important; }
+
+#PanelUI-mainView,
+#PanelUI-multiView,
+.PanelUI-subView {
+  background-color: #0f0e0e !important; /* Dark background */
+  color: #f1deb8e8 !important; /* Text color */
+
+}
+
+/* Remove borders from all child elements */
+#appMenu-popup *,
+.PanelUI-subView *,
+#PanelUI-mainView *,
+#PanelUI-multiView * {
+  border: none !important;
+}
+
+
+
+
+/* Additional cursor pointer for all menu items */
+#appMenu-popup toolbarbutton:hover,
+.subviewbutton:hover,
+toolbarbutton.subviewbutton:hover,
+.PanelUI-subView toolbarbutton:hover {
+  cursor: pointer !important;
+}
+
+/* 3. Hide Specific Menu Entries */
+#appMenu-popup toolbarbutton[label="Bookmarks"],
+#appMenu-popup toolbarbutton[data-l10n-id="appmenu-bookmarks"],
+#appMenu-popup toolbarbutton[label="Library"],
+#appMenu-popup toolbarbutton[data-l10n-id="appmenu-library"],
+#appMenu-popup toolbarbutton[label="Report Broken Site"],
+#appMenu-popup toolbarbutton[data-l10n-id="appmenu-report-broken-site"],
+#appMenu-popup toolbarbutton[data-l10n-id="appmenu-help-report-site-issue"],
+#appMenu-popup toolbarbutton[label="Quit"],
+#appMenu-popup toolbarbutton[data-l10n-id="appmenu-quit"],
+#appMenu-popup toolbarbutton[label="Help"],
+#appMenu-popup toolbarbutton[data-l10n-id="appmenu-help"],
+/* Additional selectors for report functionality */
+toolbarbutton[data-l10n-id="appmenu-help-report-site-issue"],
+toolbarbutton[label*="Report"],
+toolbarbutton[data-l10n-id*="report"] {
+  display: none !important;
+}

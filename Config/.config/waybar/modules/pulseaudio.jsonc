@@ -1,0 +1,26 @@
+{
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰖁 {volume}%",
+        "on-click": "pavucontrol",
+        "on-click-right": "~/.local/share/bin/volume.sh -o m",
+        "on-scroll-up": "~/.local/share/bin/volume.sh -o i",
+        "on-scroll-down": "~/.local/share/bin/volume.sh -o d",
+        "tooltip-format": "{icon} {desc}\nVolume: {volume}% (Max: 153%)",
+        "scroll-step": 5,
+        "max-volume": 153,
+        "format-icons": {
+            "headphone": "󰋋",
+            "hands-free": "󰋎",
+            "headset": "󰋎",
+            "phone": "󰄜",
+            "portable": "󰦧",
+            "car": "󰄋",
+            "default": [
+                "󰕿",
+                "󰖀",
+                "󰕾"
+            ]
+        }
+    }
+}

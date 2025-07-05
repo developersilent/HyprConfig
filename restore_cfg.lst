@@ -31,10 +31,13 @@ This is a punnet square of the flags, But the outputs are unexpected
 
 # Minimal configuration restoration - only what's in HyprConfig/Config/.config
 Y|Y|${HOME}/.config|alacritty|alacritty
-Y|Y|${HOME}/.config|fish|fish  
+Y|Y|${HOME}/.config|fish|fish
+Y|Y|${HOME}/.config|rofi|rofi
 Y|Y|${HOME}/.config|hypr|hyprland
+Y|Y|${HOME}/.config|waybar|waybar
 Y|Y|${HOME}/.config|starship|starship
 Y|Y|${HOME}/.local/share|bin|hyprland
 Y|Y|${HOME}/.local/share|applications|fish
+Y|Y|${HOME}/.local/share|wallpapers|swww
 Y|Y|${HOME}/.config|gtk-3.0|nwg-look
 Y|Y|${HOME}|.gtkrc-2.0|nwg-look

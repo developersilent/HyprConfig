@@ -1,0 +1,10 @@
+{
+    "custom/updates": {
+        "exec": "~/.local/share/bin/update.sh",
+        "return-type": "json",
+        "on-click": "~/.local/share/bin/update.sh up",
+        "interval": 1800,
+        "tooltip": true,
+        "signal": 20
+    }
+}

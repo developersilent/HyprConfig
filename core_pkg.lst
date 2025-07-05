@@ -37,6 +37,8 @@ satty                                                  # Modern Screenshot Annot
 cliphist                                               # clipboard manager
 wl-clip-persist                                        # Keep Wayland clipboard even after programs close (avoids crashes)
 hyprsunset                                             # blue light filter
+waybar                                                 # system bar
+
 
 # --------------------------------------------------- // Dependencies
 polkit-gnome                                           # authentication agent
@@ -48,6 +50,7 @@ libnotify                                              # for notifications
 ttf-roboto                                             # roboto font family
 ttf-jetbrains-mono-nerd                                # jetbrains font family
 dconf                                                  # configuration system for nwg-look
+noto-fonts-emoji                                       # emoji font
 
 # --------------------------------------------------- // Theming
 nwg-look                                               # gtk configuration tool
@@ -55,13 +58,15 @@ gtk3                                                   # gtk3 toolkit for nwg-lo
 gtk4                                                   # gtk4 toolkit for nwg-look
 qt5-wayland                                            # wayland support in qt5
 qt6-wayland                                            # wayland support in qt6
+python-pywalfox					                       # pywalfox support in firefox based browser, eg: zen-browser
 
 # --------------------------------------------------- // Applications
-librewolf-bin                                              # privacy-focused browser
+zen-browser-bin                                        # privacy-focused browser
 alacritty                                              # terminal
 fish                                                   # shell
 neovim                                                 # modern vim-based text editor
 fzf                                                    # Command-line fuzzy finder
+nautilus                                               # Gnome based file manager GUI
 
 # --------------------------------------------------- // Shell
 eza|fish                                               # file lister for fish
