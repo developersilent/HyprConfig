@@ -27,13 +27,15 @@ pkg_installed() {
 }
 
 chk_list() {
-    vrType="$1"
+    local vrType="$1"
     local inList=("${@:2}")
+    
     for pkg in "${inList[@]}"; do
         if pkg_installed "${pkg}"; then
-            printf -v "${vrType}" "%s" "${pkg}"
+            # Use declare to safely create the variable
+            declare -g "${vrType}=${pkg}"
             # shellcheck disable=SC2163 # dynamic variable
-            export "${vrType}" # export the variable // reference of the variable
+            export "${vrType}"
             return 0
         fi
     done
@@ -76,10 +78,16 @@ prompt_timer() {
     echo ""
     set -e
 }
+
 print_log() {
     local executable="${0##*/}"
     local logFile="${cacheDir}/logs/${HYDE_LOG}/${executable}"
-    mkdir -p "$(dirname "${logFile}")"
+    
+    # Ensure log directory exists
+    if ! mkdir -p "$(dirname "${logFile}")"; then
+        echo "Warning: Failed to create log directory" >&2
+    fi
+    
     local section=${log_section:-}
     {
         [ -n "${section}" ] && echo -ne "\e[32m[$section] \e[0m"
@@ -148,7 +156,7 @@ print_log() {
             esac
         done
         echo ""
-    } | if [ -n "${HYDE_LOG}" ]; then
+    } | if [ -n "${HYDE_LOG:-}" ] && [ -w "$(dirname "${logFile}")" ]; then
         tee >(sed 's/\x1b\[[0-9;]*m//g' >>"${logFile}")
     else
         cat

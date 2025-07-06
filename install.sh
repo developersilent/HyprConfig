@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2154
 
+set -euo pipefail
+
 cat <<"EOF"
 -------------------------------------------------
             .
@@ -19,7 +21,7 @@ EOF
 scrDir="$(dirname "$(realpath "$0")")"
 # shellcheck disable=SC1091
 if ! source "${scrDir}/global.sh"; then
-    echo "Error: unable to source global.sh..."
+    echo "Error: unable to source global.sh..." >&2
     exit 1
 fi
 
@@ -92,7 +94,7 @@ if [ ${flg_Install} -eq 1 ]; then
     # prepare package list #
     #----------------------#
     shift $((OPTIND - 1))
-    custom_pkg=$1
+    custom_pkg="${1:-}"
     cp "${scrDir}/core_pkg.lst" "${scrDir}/install_pkg.lst"
     trap 'mv "${scrDir}/install_pkg.lst" "${cacheDir}/logs/${HYDE_LOG}/install_pkg.lst"' EXIT
 
@@ -165,10 +167,21 @@ if [ ${flg_Install} -eq 1 ]; then
     #--------------------------------#
     "${scrDir}/install_pkg.sh" "${scrDir}/install_pkg.lst"
 
-    if [ $SHELL != "/bin/${myShell}" ]; then
+    if [ "$SHELL" != "/bin/${myShell}" ]; then
         print_log -sec "shell" -stat "Changing shell to" "${myShell}"
-        chsh -s "/bin/${myShell}"
-        export SHELL="/bin/${myShell}"
+        if ! chsh -s "/bin/${myShell}"; then
+            print_log -sec "shell" -warn "Failed to change shell to" "${myShell}"
+        else
+            export SHELL="/bin/${myShell}"
+        fi
+    fi
+    
+    # Check and install pywalfox if paru is installed
+    if pkg_installed "paru"; then
+        print_log -sec "pywalfox" -stat "Checking pywalfox installation..."
+        if ! "${scrDir}/check-pywalfox.sh"; then
+            print_log -sec "pywalfox" -warn "pywalfox check failed, continuing..."
+        fi
     fi
 fi
 
@@ -201,16 +214,15 @@ if [ $flg_Install -eq 1 ]; then
 fi
 print_log -b "Log" " :: " -y "View logs at ${cacheDir}/logs/${HYDE_LOG}"
 
-if [ $flg_Install -eq 1 ] ||
-    [ $flg_Restore -eq 1 ] ||
-    [ $flg_Service -eq 1 ] &&
-    [ $flg_DryRun -ne 1 ]; then
+if { [ $flg_Install -eq 1 ] || [ $flg_Restore -eq 1 ] || [ $flg_Service -eq 1 ]; } && [ $flg_DryRun -ne 1 ]; then
     print_log -stat "HyprConfig" "It is recommended to reboot after installation. Do you want to reboot? (y/N)"
     read -r answer
 
     if [[ "$answer" == [Yy] ]]; then
         echo "Rebooting system"
-        systemctl reboot
+        if ! systemctl reboot; then
+            print_log -warn "Failed to reboot system automatically"
+        fi
     else
         echo "The system will not reboot"
     fi

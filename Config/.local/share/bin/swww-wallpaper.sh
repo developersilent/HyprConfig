@@ -26,10 +26,9 @@ while true; do
     if img=$(find "$WALLPAPERS" -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.webp" \) | shuf -n 1); then
         if [[ -n "$img" ]]; then
             echo "Setting wallpaper: $(basename "$img")"
-            swww img "$img" --transition-type wipe --transition-duration 2
+            matugen image "$img"
         fi
     fi
-    
-    sleep "$INTERVAL"
+    sleep "$INTERVAL"  # Wait before changing again
 done
 

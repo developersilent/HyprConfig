@@ -38,7 +38,7 @@ cliphist                                               # clipboard manager
 wl-clip-persist                                        # Keep Wayland clipboard even after programs close (avoids crashes)
 hyprsunset                                             # blue light filter
 waybar                                                 # system bar
-
+matugen-bin                                            # color scheme gen 
 
 # --------------------------------------------------- // Dependencies
 polkit-gnome                                           # authentication agent
@@ -58,7 +58,7 @@ gtk3                                                   # gtk3 toolkit for nwg-lo
 gtk4                                                   # gtk4 toolkit for nwg-look
 qt5-wayland                                            # wayland support in qt5
 qt6-wayland                                            # wayland support in qt6
-python-pywalfox					                       # pywalfox support in firefox based browser, eg: zen-browser
+
 
 # --------------------------------------------------- // Applications
 zen-browser-bin                                        # privacy-focused browser

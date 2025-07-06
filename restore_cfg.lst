@@ -1,5 +1,19 @@
-█▀▄ █▀▀ █▀█ █▀█ █▀▀ █▀▀ ▄▀█ ▀█▀ █▀▀ █▀▄
-█▄▀ ██▄ █▀▀ █▀▄ ██▄ █▄▄ █▀█ ░█░ ██▄ █▄▀
+█▀▄ █▀▀ █▀█ █▀█ █▀▀ █▀▀ ▄▀█ ▀█▀# Minimal configuration restoration - only what's in HyprConfig/Config/.config
+Y|Y|${HOME}/.config|alacritty|alacritty
+Y|Y|${HOME}/.config|fish|fish
+Y|Y|${HOME}/.config|rofi|rofi
+Y|Y|${HOME}/.config|hypr|hyprland
+Y|Y|${HOME}/.config|waybar|waybar
+Y|Y|${HOME}/.config|starship|starship
+Y|Y|${HOME}/.config|matugen|matugen
+Y|Y|${HOME}/.local/share|bin|hyprland
+Y|Y|${HOME}/.local/share|applications|fish
+Y|Y|${HOME}/.local/share|wallpapers|swww
+Y|Y|${HOME}/.local/share|icons|nwg-look
+Y|Y|${HOME}/.local/share|themes|nwg-look
+Y|Y|${HOME}/.zen|userChrome.css|zen-browser-bin
+Y|Y|${HOME}/.config|gtk-3.0|nwg-look
+Y|Y|${HOME}|.gtkrc-2.0|nwg-look██▄ █▀▀ █▀▄ ██▄ █▄▄ █▀█ ░█░ ██▄ █▄▀
 
 We will be using ./restore_cfg.psv to restore the dotfiles
 
@@ -36,6 +50,7 @@ Y|Y|${HOME}/.config|rofi|rofi
 Y|Y|${HOME}/.config|hypr|hyprland
 Y|Y|${HOME}/.config|waybar|waybar
 Y|Y|${HOME}/.config|starship|starship
+Y|Y|${HOME}/.config|matugen|matugen
 Y|Y|${HOME}/.local/share|bin|hyprland
 Y|Y|${HOME}/.local/share|applications|fish
 Y|Y|${HOME}/.local/share|wallpapers|swww

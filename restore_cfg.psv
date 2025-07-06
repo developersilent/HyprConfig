@@ -32,25 +32,31 @@ S|${HOME}/.config|fish|fish
 S|${HOME}/.config|hypr|hyprland
 S|${HOME}/.config|waybar|waybar
 S|${HOME}/.config|starship|starship
+S|${HOME}/.config|matugen|matugen
+S|${HOME}/.config|rofi|rofi
 S|${HOME}/.local/share|applications|fish
 S|${HOME}/.local/share|bin|hyprland
 S|${HOME}/.local/share|icons|nwg-look
 S|${HOME}/.local/share|themes|nwg-look
-S|${HOME}/.config|rofi|rofi
+S|${HOME}/.local/share|wallpapers|swww
+
+# Browser configuration
+S|${HOME}/.zen|userChrome.css|zen-browser-bin
 
 # GTK theming support for nwg-look
 P|${HOME}/.config|gtk-3.0|nwg-look
 P|${HOME}|.gtkrc-2.0|nwg-look
 
 # Icon themes
-S|${HOME}/.local/share|icons|gtk3-nocsd
-S|${HOME}/.local/share/icons|Tela-circle-black|gtk3-nocsd
+S|${HOME}/.local/share|icons|nwg-look
+S|${HOME}/.local/share/icons|Tela-circle-black|nwg-look
+S|${HOME}/.local/share/icons|Gruvbox-cursor|nwg-look
 
 # GTK themes  
-S|${HOME}/.local/share|themes|gtk3-nocsd
-S|${HOME}/.local/share/themes|Gruvbox-Dark|gtk3-nocsd|gtk3-nocsd
-S|${HOME}/.local/share/themes|Gruvbox-Dark-hdpi|gtk3-nocsd|gtk3-nocsd
-S|${HOME}/.local/share/themes|Gruvbox-Dark-xhdpi|gtk3-nocsd|gtk3-nocsd
+S|${HOME}/.local/share|themes|nwg-look
+S|${HOME}/.local/share/themes|Gruvbox-Dark|nwg-look
+S|${HOME}/.local/share/themes|Gruvbox-Dark-hdpi|nwg-look
+S|${HOME}/.local/share/themes|Gruvbox-Dark-xhdpi|nwg-look
 
 # Wallpapers
 S|${HOME}/.local/share|wallpapers|swww
