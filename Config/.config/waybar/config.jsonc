@@ -1,50 +1,59 @@
 {
-    "layer": "top",
-    "position": "bottom",
-    "mod": "dock",
-    "height": 10,
-    "exclusive": true,
-    "passthrough": false,
-    "gtk-layer-shell": true,
-    "reload_style_on_change": true,
-    "include": [
-        "~/.config/waybar/modules/*.jsonc"
-    ],
-    "modules-left": [
-        "custom/l_end",
-        "cpu",
-        "memory",
-        "custom/cpuinfo",
-        "custom/r_end",
-        "custom/l_end",
-        "hyprland/workspaces",
-        "custom/r_end"
-    ],
-    "modules-center": [
-        "custom/l_end",
-        "clock",
-        "custom/r_end"
-    ],
-    "modules-right": [
-        "custom/l_end",
-        "network",
-        "bluetooth",
-        "tray",
-        "custom/updates",
-        "custom/r_end",
-        "custom/l_end",
-        "pulseaudio",
-        "backlight",
-        "custom/r_end"
-    ],
-    "custom/l_end": {
-        "format": " ",
-        "interval": "once",
-        "tooltip": false
-    },
-    "custom/r_end": {
-        "format": " ",
-        "interval": "once",
-        "tooltip": false
-    }
+  "layer": "top",
+  "position": "bottom",
+  "mod": "dock",
+  "height": 10,
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  "reload_style_on_change": true,
+  "include": [
+    "modules/backlight.jsonc",
+    "modules/bluetooth.jsonc",
+    "modules/clock.jsonc",
+    "modules/cpu.jsonc",
+    "modules/cpuinfo.jsonc",
+    "modules/memory.jsonc",
+    "modules/network.jsonc",
+    "modules/pulseaudio.jsonc",
+    "modules/spacers.jsonc",
+    "modules/theme-switcher.json",
+    "modules/tray.jsonc",
+    "modules/updates.jsonc",
+    "modules/workspaces.jsonc"
+  ],
+  "modules-left": [
+    "custom/l_end",
+    "cpu",
+    "memory",
+    "custom/cpuinfo",
+    "custom/r_end",
+    "custom/l_end",
+    "hyprland/workspaces",
+    "custom/r_end"
+  ],
+  "modules-center": ["custom/l_end", "clock", "custom/r_end"],
+  "modules-right": [
+    "custom/l_end",
+    "network",
+    "bluetooth",
+    "tray",
+    "custom/updates",
+    "custom/r_end",
+    "custom/l_end",
+    "pulseaudio",
+    "backlight",
+    "custom/r_end"
+  ],
+  "custom/l_end": {
+    "format": " ",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/r_end": {
+    "format": " ",
+    "interval": "once",
+    "tooltip": false
+  }
 }
+

@@ -1,0 +1,77 @@
+# --------------------------------------------------- // System
+pipewire                                               # audio/video server
+pipewire-alsa                                          # pipewire alsa client
+pipewire-audio                                         # pipewire audio client
+pipewire-jack                                          # pipewire jack client
+pipewire-pulse                                         # pipewire pulseaudio client
+gst-plugin-pipewire                                    # pipewire gstreamer client
+wireplumber                                            # pipewire session manager
+pavucontrol                                            # pulseaudio volume control
+pamixer                                                # pulseaudio cli mixer
+networkmanager                                         # network manager
+network-manager-applet                                 # network manager system tray utility
+bluez                                                  # bluetooth protocol stack
+bluez-utils                                            # bluetooth utility cli
+blueman                                                # bluetooth manager gui
+brightnessctl                                          # screen brightness control
+playerctl                                              # media controls
+udiskie                                                # manage removable media
+
+# --------------------------------------------------- // Display Manager
+sddm                                                   # display manager for KDE plasma
+qt5-quickcontrols                                      # for sddm theme ui elements
+qt5-quickcontrols2                                     # for sddm theme ui elements
+qt5-graphicaleffects                                   # for sddm theme effects
+
+# --------------------------------------------------- // Window Manager
+hyprland                                               # wlroots-based wayland compositor
+dunst                                                  # notification daemon
+rofi-wayland                                           # application launcher
+swww                                                   # wallpaper
+hyprlock                                               # lock screen
+wlogout                                                # logout menu
+grim                                                   # screenshot tool
+hyprpicker                                             # color picker
+slurp                                                  # region select for screenshot/screenshare
+satty                                                  # Modern Screenshot Annotation
+cliphist                                               # clipboard manager
+wl-clip-persist                                        # Keep Wayland clipboard even after programs close (avoids crashes)
+hyprsunset                                             # blue light filter
+waybar                                                 # system bar
+matugen-bin                                            # color scheme gen 
+
+# --------------------------------------------------- // Dependencies
+polkit-gnome                                           # authentication agent
+xdg-desktop-portal-hyprland                            # xdg desktop portal for hyprland
+xdg-desktop-portal-gtk                                 # file picker and dbus  integration
+pacman-contrib                                         # for system update check
+jq                                                     # for json processing
+libnotify                                              # for notifications
+ttf-roboto                                             # roboto font family
+ttf-jetbrains-mono-nerd                                # jetbrains font family
+dconf                                                  # configuration system for nwg-look
+noto-fonts-emoji                                       # emoji font
+
+# --------------------------------------------------- // Theming
+nwg-look                                               # gtk configuration tool
+gtk3                                                   # gtk3 toolkit for nwg-look
+gtk4                                                   # gtk4 toolkit for nwg-look
+qt5-wayland                                            # wayland support in qt5
+qt6-wayland                                            # wayland support in qt6
+
+
+# --------------------------------------------------- // Applications
+zen-browser-bin                                        # privacy-focused browser
+alacritty                                              # terminal
+fish                                                   # shell
+neovim                                                 # modern vim-based text editor
+fzf                                                    # Command-line fuzzy finder
+nautilus                                               # Gnome based file manager GUI
+
+# --------------------------------------------------- // Shell
+eza|fish                                               # file lister for fish
+starship|fish                                          # customizable shell prompt
+duf|fish                                               # prettier version of df for fish
+fastfetch                                              # system information fetch tool
+
+#user packages
